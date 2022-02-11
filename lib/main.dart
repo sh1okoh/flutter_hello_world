@@ -71,91 +71,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'You have pushed the button this many times',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            Text(
-              '$_type', style: TextStyle(fontSize: 20, color: Colors.red)
-            )
+            if (_counter % 2 == 0) Text('偶数です', style: TextStyle(fontSize: 20, color: Colors.red)),
+            if (_counter % 2 == 1) Text('奇数です', style: TextStyle(fontSize: 20, color: Colors.red))
           ],
         )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add)
+        child: const Icon(Icons.add)
       )
     );
   }
 }
-
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   int _counter = 0;
-
-//   void _incrementCounter() {
-//     setState(() {
-//       // This call to setState tells the Flutter framework that something has
-//       // changed in this State, which causes it to rerun the build method below
-//       // so that the display can reflect the updated values. If we changed
-//       // _counter without calling setState(), then the build method would not be
-//       // called again, and so nothing would appear to happen.
-//       _counter++;
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // This method is rerun every time setState is called, for instance as done
-//     // by the _incrementCounter method above.
-//     //
-//     // The Flutter framework has been optimized to make rerunning build methods
-//     // fast, so that you can just rebuild anything that needs updating rather
-//     // than having to individually change instances of widgets.
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Row(children: [
-//           Icon(Icons.create),
-//           Text("初めてのタイトル"),
-//         ])
-//       ),
-//       drawer: Drawer(child: Center(child: Text("Drawer"))),
-//       body: Column(children: [
-//         Text("初めてのテキスト"),
-//         Text("2番目のテキスト"),
-//         TextButton(
-//           onPressed: () => { print("ボタンが押されたよ") },
-//           child: Text("更新")
-//         ),
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceAround,
-//           children: [
-//             Icon(
-//               Icons.favorite,
-//               color: Colors.pink,
-//               size: 24.0,
-//             ),
-//             Icon(
-//               Icons.audiotrack,
-//               color: Colors.green,
-//               size: 30.0,
-//             ),
-//             Icon(
-//                 Icons.beach_access,
-//                 color: Colors.blue,
-//                 size: 36.0,
-//               ),
-//           ]
-//         )
-//       ]),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () => { print("押したね？") },
-//         child: Icon(Icons.timer)
-//       ),
-//     );
-//   }
-// }
