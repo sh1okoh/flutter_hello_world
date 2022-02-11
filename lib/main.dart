@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () => { print("押したね？") },
-        child: Icon(Icons.timer),
+        child: Icon(Icons.timer)
       ),
     );
   }
