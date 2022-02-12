@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 
 class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
+    print("context");
+    print(context);
     return Scaffold(
       appBar: AppBar(title: const Text('First Page')),
       body: Center(
